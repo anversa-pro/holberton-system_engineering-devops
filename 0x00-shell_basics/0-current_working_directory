@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e "This is the path: ${pwd}"
+echo -e "${pwd}"
