@@ -1,2 +1,3 @@
 #!/bin/bash
+echo "${pwd}"
 $DIR/path/to/file
