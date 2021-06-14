@@ -1,0 +1,5 @@
+# SHELL REDIRECTIONS
+**I/O REDIRECTION**
+1. Echo
+2.
+3.
