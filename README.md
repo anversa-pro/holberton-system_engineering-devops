@@ -2,6 +2,7 @@
 <div align="center">
 <img src="/imgfiles/DevOps.png" width="500"/>
 </div>
+
 **Seven things to consider for building an application.**
  1.  Estimating load predictability
  2.  Determining when the traffic shoots up or falls down
