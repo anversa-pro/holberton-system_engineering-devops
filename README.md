@@ -1,5 +1,5 @@
 # SYSTEM ENGINEERING DEVOPS
-<img src="/imgfiles/DevOps.png" width="1000">
+<img src="/imgfiles/DevOps.png" width="500">
 
 **Seven things to consider for building an application.**
  1.  Estimating load predictability
