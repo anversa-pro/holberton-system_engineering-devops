@@ -1,5 +1,5 @@
 # SYSTEM ENGINEERING DEVOPS
-![DevOps cicle description](https://github.com/anversa-pro/holberton-system_engineering-devops/blob/fe8dbbaa85d81066544dbbbedc85f57a69cf6ce5/imgfiles/DevOps.png =250x)
+<img src="/imgfiles/DevOps.png" width="200">
 
 **Seven things to consider for building an application.**
  1.  Estimating load predictability
