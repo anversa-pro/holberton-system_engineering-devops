@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#  Bash script that displays the content of the current directory
+#  In a list format, where only the part of the name is displayed
+directory=$(ls)
+for name in $directory
+do
+    echo "$name" | cut -d "-" -f2
+done
