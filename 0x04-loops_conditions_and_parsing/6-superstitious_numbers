@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Bash script that displays numbers from 1 to 20 with exceptions
+cont=1
+while [ $cont -le 20 ];
+do
+    echo "$cont"
+    case "$cont" in
+    4)
+        echo "bad luck from China";;
+    9)
+        echo "bad luck from Japan";;
+    17)
+        echo "bad luck from Italy";;
+    esac
+        cont=$((cont+1))
+done
