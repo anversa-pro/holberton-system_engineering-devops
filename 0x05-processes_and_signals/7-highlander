@@ -2,6 +2,7 @@
 # Bash script that displays a phrase indefinitely with a sleep 2
 # in between each iteration other phrase when receiving a SIGTERM signal
 trap 'echo "I am invincible!!!"' SIGTERM
+x=0
 while [ $x -le 1 ]; do
 	echo "To infinity and beyond"
 	sleep 2
