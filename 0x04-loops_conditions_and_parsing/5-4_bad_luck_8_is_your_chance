@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Bash script that displays Best School 10 times with exceptions
+cont=0
+while [ $cont -le 9 ];
+do
+    if [ $cont -eq 3 ]
+    then
+        echo "bad luck"
+    elif [ $cont -eq 7 ]
+    then
+        echo "good luck"
+    else
+        echo "Best School"
+    fi
+        cont=$((cont+1))
+done
