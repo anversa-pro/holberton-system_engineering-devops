@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Script that displays usrname, usrid & home dir path of /etc/passwd
+file="/etc/passwd"
+while IFS= read -r dir
+do
+  echo "$dir" | cut -d ":" -f 1,3,6
+done < "$file"
