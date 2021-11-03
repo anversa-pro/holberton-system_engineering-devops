@@ -7,15 +7,15 @@ echo "Y U no love me?!"
 }
 on_SIGTERM () {
     echo "I hate the kill command"
-    rm /var/run/my.pid
+    rm /var/run/myscript.pid
     exit
 }
 on_SIGQUIT () {
-    rm /var/run/my.pid
+    rm /var/run/myscript.pid
     exit
 }
 
-echo $$ > /var/run/myscript.pid
+echo $$ > /var/run/my.pid
 trap on_SIGTERM SIGTERM
 trap on_SIGQUIT SIGQUIT
 trap on_SIGINT SIGINT
