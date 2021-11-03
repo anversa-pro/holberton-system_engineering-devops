@@ -1,18 +1,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
-/**
- * infinite_while - function that creates an infinity loop
- * Return: Always 0.
- */
-int infinite_while(void)
-{
-	while (1)
-	{
-		sleep(1);
-	}
-	return (0);
-}
+int infinite_while(void);
 
 /**
  * main - program that creates 5 zombie processes.
@@ -35,4 +24,17 @@ int main(void)
 		}
 	}
 	return (infinite_while());
+}
+
+/**
+ * infinite_while - function that creates an infinity loop
+ * Return: Always 0.
+ */
+int infinite_while(void)
+{
+	while (1)
+	{
+		sleep(1);
+	}
+	return (0);
 }
