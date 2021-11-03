@@ -15,7 +15,7 @@ on_SIGQUIT () {
     exit
 }
 
-echo $$ > /var/run/my.pid
+echo $$ > /var/run/myscript.pid
 trap on_SIGTERM SIGTERM
 trap on_SIGQUIT SIGQUIT
 trap on_SIGINT SIGINT
