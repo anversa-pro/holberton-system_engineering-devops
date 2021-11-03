@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Script that displays mixing text with fields of /etc/passwd
+file="/etc/passwd"
+while IFS= read -r dir
+do
+  USERNAME=$(echo "$dir" | cut -d ":" -f 1)
+  GROUP_ID=$(echo "$dir" | cut -d ":" -f 4)
+  HOME_DIRECTORY=$(echo "$dir" | cut -d ":" -f 6)
+  COMMAND_SHELL=$(echo "$dir" | cut -d ":" -f 7)
+  USER_ID=$(echo "$dir" | cut -d ":" -f 3)
+  PASSWORD=$(echo "$dir" | cut -d ":" -f 2)
+  INFO=$(echo "$dir" | cut -d ":" -f 5)
+  echo "The user $USERNAME is part of the $GROUP_ID gang, lives in $HOME_DIRECTORY and rides $COMMAND_SHELL. $USER_ID's place is protected by the passcode $PASSWORD, more info about the user here: $INFO"
+done < "$file"
