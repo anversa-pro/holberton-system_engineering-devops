@@ -2,8 +2,8 @@
 # script that creates a file with PID &
 # Displays messages according to receiving signal
 on_SIGINT () {
-echo "Y U no love me?!"
-  exit
+    echo "Y U no love me?!"
+    exit
 }
 on_SIGTERM () {
     echo "I hate the kill command"
@@ -14,14 +14,14 @@ on_SIGQUIT () {
     rm /var/run/myscript.pid
     exit
 }
-
-echo $$ > /var/run/myscript.pid
 trap on_SIGTERM SIGTERM
 trap on_SIGQUIT SIGQUIT
 trap on_SIGINT SIGINT
 
-while (( 1 ))
+echo "$$" > /var/run/myscript.pid
+
+while true
 do
-    echo To infinity and beyond
+    echo "To infinity and beyond"
     sleep 2
 done
