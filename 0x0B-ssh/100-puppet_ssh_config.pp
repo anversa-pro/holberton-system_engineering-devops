@@ -3,7 +3,7 @@
 # without a password with puppet
 
 exec { 'connect':
-    command  => 'echo "IdentityFile ~/.ssh/holberton\nPasswordAuthentication no" >> /etc/ssh/ssh_config',
+    command  => 'echo "IdentityFile ~/.ssh/school\nPasswordAuthentication no" >> /etc/ssh/ssh_config',
     path     => '/bin/',
     provider => 'shell'
 }
