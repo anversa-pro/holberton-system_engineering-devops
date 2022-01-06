@@ -1,7 +1,7 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 # Install a ngnix web server with a script
 
-apt update -y
-apt install nginx -y
+apt-get update -y
+apt-get install nginx -y
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
 service restart nginx
