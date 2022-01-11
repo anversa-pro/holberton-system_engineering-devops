@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Install a ngnix web server with a script
+
+HACONFIG="
+frontend http_front
+   bind *:80
+   stats uri /haproxy?stats
+   default_backend http_back
+
+backend http_back
+   balance roundrobin
+   server web-01 34.74.11.87:80 check
+   server web-02 54.211.225.96:80 check
+   "
+add-apt-repository -y ppa:vbernat/haproxy-1.7
+apt -y update
+apt install -y haproxy
+echo "$HACONFIG" >> /etc/haproxy/haproxy.cfg
+service haproxy restart
