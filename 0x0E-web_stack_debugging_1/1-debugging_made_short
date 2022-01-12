@@ -2,4 +2,4 @@
 # Script to kill a process for service (init) to say that nginx is not running
 
 sudo sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
-sudo pkill -9 -fx nginx
+sudo pkill -9 -f nginx
