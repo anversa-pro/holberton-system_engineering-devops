@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# firewall setup
+
+# install uncomplicated firewall
+sudo apt-get install ufw
+# define allowed traffic
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+# allow TCP trafic - SSH
+sudo ufw allow 22
+# allow TCP traffic - http
+sudo ufw allow 80
+# allow TCP traffic - https ssl
+sudo ufw allow 443
+sudo ufw enable
