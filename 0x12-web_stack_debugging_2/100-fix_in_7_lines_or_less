@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Script to run nginx as nginx user & listen on all active IPs on port 8080
+
+pkill -f apache2
+chmod 700 /etc/nginx/nginx.conf
+sed -i "s/80/8080/" /etc/nginx/sites-available/default
+sudo -u nginx service nginx restart
