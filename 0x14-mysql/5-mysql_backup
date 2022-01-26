@@ -2,4 +2,4 @@
 # Script to create a backup file with mysqldump command
 
 mysqldump -u root -p"$1" --all-databases > backup.sql
-tar -cvf "$(date +%d-%m-%Y).tar.gz" backup.sql
+tar -czvf "$(date +%d-%m-%Y).tar.gz" backup.sql
