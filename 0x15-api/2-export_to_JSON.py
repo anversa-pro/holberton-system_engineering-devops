@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Exports data in the JSON format"""
+"""Script to export employee tasks data in the JSON format."""
 
 if __name__ == "__main__":
 
@@ -10,13 +10,13 @@ if __name__ == "__main__":
     user_i = sys.argv[1]
     usr = requests.get("https://jsonplaceholder.typicode.com/users/{}"
                        .format(user_i))
-    todo_s = requests.get('https://jsonplaceholder.typicode.com/todos')
-    todo_s = todo_s.json()
+    toDo = requests.get('https://jsonplaceholder.typicode.com/todos')
+    toDo = toDo.json()
 
     todoUser = {}
     taskList = []
 
-    for task in todo_s:
+    for task in toDo:
         if task.get('userId') == int(user_i):
             taskDict = {"task": task.get('title'),
                         "completed": task.get('completed'),

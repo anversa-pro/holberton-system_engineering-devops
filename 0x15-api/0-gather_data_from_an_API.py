@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""get info from a rest-api"""
+"""returns an employee ToDo list progress using a REST-API"""
 import requests
 import sys
 
