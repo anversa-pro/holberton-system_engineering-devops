@@ -10,10 +10,10 @@ def recurse(subreddit, hot_list=[], count=0, after=None):
     import requests
 
     response = requests.get("https://www.reddit.com/r/{}/hot.json"
-                       .format(subreddit),
-                       params={"count": count, "after": after},
-                       headers={"User-Agent": "mozilla"},
-                       allow_redirects=False)
+                            .format(subreddit),
+                            params={"count": count, "after": after},
+                            headers={"User-Agent": "mozilla"},
+                            allow_redirects=False)
     if response.status_code >= 400:
         return None
 
