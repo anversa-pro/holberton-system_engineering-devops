@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 Function that queries Reddit API and returns
 the titles of all hot articles for a given subreddit
 """
